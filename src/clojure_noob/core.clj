@@ -3,7 +3,7 @@
 
 (defn taco
   []
-  (if true
+  (if nil
     "something was true" "something was not true")
   )
 
