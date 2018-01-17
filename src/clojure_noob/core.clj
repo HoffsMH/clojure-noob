@@ -66,7 +66,13 @@
 (def tope "ok")
 
 ; looks like I can just have expressions floating out in space with no connections?
-(or false true)
+; behaves like lambda or and and? 
+; or = first truthy or last falsey?
+; and = first falsey or last truthy?
+(or false nil :large_I_mean_venti :why_cant_I_just_say_large)
+
+; what is this thing
+()
 
 ; looks like def is fine without a definition
 ; this ends up being clojure lang unbound?
