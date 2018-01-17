@@ -1,9 +1,12 @@
 (ns clojure-noob.core
   (:gen-class))
 
+
+(def tope "ok")
+
 (defn taco
   []
-  (if (= nil tope)
+  (if (= "ok" tope)
     "something was true" "something was not true")
   )
 
