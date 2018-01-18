@@ -8,6 +8,7 @@
 (or false nil :large_I_mean_venti :why_cant_I_just_say_large)
 
 ; looks like def is fine without a definition
+; this ends up being clojure lang unbound?
 (def tall)
 
 (def venti
@@ -29,7 +30,8 @@
 (defn taco
   []
   (if (= "ok" tope)
-    "something was true" "something was not true"))
+    "something was true"
+    "something was not true"))
 
 (defn -main
   [& args]
