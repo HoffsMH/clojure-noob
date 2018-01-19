@@ -2,6 +2,8 @@
   (:gen-class))
 
 ;; Return the first element of a collection
+; so earlier I was thinking that destructuring only works in let
+; but you can destructure right there in fn args which is nice
 (defn my-first
   [[first-thing]] ; Notice that first-thing is within a vector
   first-thing)
