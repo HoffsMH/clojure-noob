@@ -5,14 +5,14 @@
 (def tope "ok")
 
 ; looks like I can just have expressions floating out in space with no connections?
-(or false nil :large_I_mean_venti :why_cant_I_just_say_large)
+; (or false true)
 
 ; looks like def is fine without a definition
 ; this ends up being clojure lang unbound?
 (def tall)
 
-(def venti
-  (or false nil :large_I_mean_venti :why_cant_I_just_say_large))
+; (def venti
+;   (or false nil :large_I_mean_venti :why_cant_I_just_say_large))
 
 ; looks like this gets run even though its completely outside of main
 ; this seems like it could be a little dangerous no?
@@ -24,7 +24,7 @@
 (println tall)
 
 ; predictably prints out :large_I_mean_venti
-(println venti)
+; (println venti)
 
 
 (defn taco
@@ -49,3 +49,4 @@
 ; what is the drawback
 
 ; TODO: investigate formatters and linters
+; lint eastwood lol
