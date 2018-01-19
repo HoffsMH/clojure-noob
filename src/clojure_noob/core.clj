@@ -1,8 +1,14 @@
 (ns clojure-noob.core
   (:gen-class))
 
+;; Return the first element of a collection
+(defn my-first
+  [[first-thing]] ; Notice that first-thing is within a vector
+  first-thing)
 
-; lets try to curry something
+(my-first ["oven" "bike" "war-axe"])
+
+; hok
 (defn some-func
   [one two three four]
   (str four one two three))
@@ -18,8 +24,9 @@
           :weapon "Mystic Staff"
           :score 150}})
 
-(let [{{:keys [class weapon]} :joe} multiplayer-game-state]
-  (println "Joe is a" class "wielding a" weapon))
+(let [{{:keys [class weapon]} :joe :as hotdog} multiplayer-game-state]
+  (println "Joe is a" class "wielding a" weapon)
+  (println "well here is hotdog " hotdog))
 
 (def tope "ok")
 
