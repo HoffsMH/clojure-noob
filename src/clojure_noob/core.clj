@@ -9,7 +9,7 @@
 
 (def inc3 (inc-maker 3))
 
-(inc3 7)
+(def this-is-10 (inc3 7))
 
 ; now lets see about lexical scoping
 (defn outerfn
