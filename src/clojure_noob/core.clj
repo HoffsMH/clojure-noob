@@ -1,6 +1,16 @@
 (ns clojure-noob.core
   (:gen-class))
 
+; wtf is up with this string between args and body??
+(defn inc-maker
+  "Create a custom incrementor"
+  [inc-by]
+  #(+ % inc-by))
+
+(def inc3 (inc-maker 3))
+
+(inc3 7)
+
 ; now lets see about lexical scoping
 (defn outerfn
   [x]
