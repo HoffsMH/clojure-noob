@@ -10,6 +10,22 @@
 
 (my-first ["oven" "bike" "war-axe"])
 
+(defn chooser
+  [[first-choice second-choice & unimportant-choices]]
+  (println (str "Your first choice is: " first-choice))
+  (println (str "Your second choice is: " second-choice))
+  (println (str "We're ignoring the rest of your choices. "
+                "Here they are in case you need to cry over them: "
+                (clojure.string/join ", " unimportant-choices))))
+
+(chooser ["Marmalade", "Handsome Jack", "Pigpen", "Aquaman"])
+
+(defn announce-treasure-location
+   [{:keys [lat lng]}]
+   (str "Treasure lat: " lat " Treasure lng: " lng))
+
+(announce-treasure-location {:lat 28.22 :lng 81.33})
+
 ; hok
 (defn some-func
   [one two three four]
