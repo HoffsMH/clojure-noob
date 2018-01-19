@@ -2,17 +2,36 @@
   (:gen-class))
 
 
+; lets try to curry something
+(defn some-func
+  [one two three four]
+  (str four one two three))
+
+(def multiplayer-game-state
+  {:joe {:class "Ranger"
+         :weapon "Longbow"
+         :score 100}
+   :jane {:class "Knight"
+          :weapon "Greatsword"
+          :score 140}
+   :ryan {:class "Wizard"
+          :weapon "Mystic Staff"
+          :score 150}})
+
+(let [{{:keys [class weapon]} :joe} multiplayer-game-state]
+  (println "Joe is a" class "wielding a" weapon))
+
 (def tope "ok")
 
 ; looks like I can just have expressions floating out in space with no connections?
-; (or false true)
+(or false true)
 
 ; looks like def is fine without a definition
 ; this ends up being clojure lang unbound?
 (def tall)
 
-; (def venti
-;   (or false nil :large_I_mean_venti :why_cant_I_just_say_large))
+(def venti
+  (or false nil :large_I_mean_venti :why_cant_I_just_say_large))
 
 ; looks like this gets run even though its completely outside of main
 ; this seems like it could be a little dangerous no?
@@ -24,7 +43,7 @@
 (println tall)
 
 ; predictably prints out :large_I_mean_venti
-; (println venti)
+(println venti)
 
 
 (defn taco
@@ -50,3 +69,8 @@
 
 ; TODO: investigate formatters and linters
 ; lint eastwood lol
+
+
+(into [] (flatten (conj [3 4 5 6 7] [1 2 5 7])))
+
+(into [] (concat [1 2 3 4] [2 3]))
