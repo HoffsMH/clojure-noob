@@ -1,6 +1,13 @@
 (ns clojure-noob.core
   (:gen-class))
 
+; now lets see about lexical scoping
+(defn outerfn
+  [x]
+  (fn [] str x))
+; yup looks about right
+; how would I go about testing that?
+
 ;; Return the first element of a collection
 ; so earlier I was thinking that destructuring only works in let
 ; but you can destructure right there in fn args which is nice

@@ -12,3 +12,7 @@
   (testing "that announce-treasure-location works"
     (is (= (announce-treasure-location {:lat 28.22 :lng 81.33}) 
       "Treasure lat: 28.22 Treasure lng: 81.33"))))
+
+(deftest lexical-scoping
+  (testing "that there is lexical scoping"
+    (is (= ((outerfn "okwhat")) "okwhat"))))
